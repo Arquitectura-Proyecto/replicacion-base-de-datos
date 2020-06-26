@@ -1,4 +1,4 @@
-# replicacion-base-de-datos
+# Replicacion base de datos mysql
 
 Este archivo creara dos replicas. Las bases de datos solo seran acedidas desde el cluster. No podran ser acedidas por fuera del mismo.
 
@@ -17,7 +17,9 @@ importar los archivos siguientes al cluster en el siguiente orden:
 
 ## PASO 2:
 ### Lanzar la consola de kubernets desde el cluster.
-### Correr el siguiente comando para crear la base de datos (Este paso solo se debe hacer una vez gracias a los volumenes)
+### Correr el siguiente comando para crear la base de datos
+
+(Este paso solo se debe hacer una vez gracias a los volumenes)
  
 kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
   mysql -h mysql-0.mysql <<EOF
