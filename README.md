@@ -21,21 +21,24 @@ importar los archivos siguientes al cluster en el siguiente orden:
 
 (Este paso solo se debe hacer una vez gracias a los volumenes)
  
-kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
+> kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
   mysql -h mysql-0.mysql <<EOF
 CREATE DATABASE authentication;
-EOF
+EOF 
  ### Verificar que la base de datos fue creada correctamente
-kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
+ > kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
   mysql -h mysql-read -e "show databases"
 
 ## PASO 3:
 Correr el microservicio a conestar con las siguiente variables de entorno
 
-  DBUSER	root
-  DBURL	mysql
-  DBPORT	3306
-  DBPASSWORD	
+  > DBUSER	root 
+  
+  > DBURL	mysql 
+  
+  > DBPORT	3306 
+  
+  > DBPASSWORD	 
   
   ### Nota1: 
   la base de datos no tiene contraseña, esto no es accidental 
@@ -46,7 +49,7 @@ Correr el microservicio a conestar con las siguiente variables de entorno
 ## Otros
 ### Más informacioń
  Ejemplo adaptado de:
-https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/#configmap
+https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
 
 ### replicas
 Para las crear más replicas se debe correr el siguiente comando (En este caso generaria 5 replicas)
@@ -56,4 +59,13 @@ kubectl scale statefulset mysql  --replicas=5
 Note que esto no creará automaticamente los volumen persistentes, estos deben ser creados importando y adaptando el archivo pvc.ymal
 
 #### Nota 2
-Si reduce el numero e replicar debe eliminar los volumenes manualmente
+Si reduce el numero de replicas debe eliminar los volumenes manualmente
+
+Para listar los volumenes:
+> kubectl get pvc -l app=mysql
+
+para eliminar un volumen:
+
+> kubectl delete pvc data-mysql-3
+
+ donde data-mysql-3 es el nombre del volumen. Además devera eliminar manualmente el volumen persistente creado con el archivo pvc.ymal
