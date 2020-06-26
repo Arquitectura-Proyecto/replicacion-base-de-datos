@@ -56,7 +56,9 @@ Para las crear más replicas se debe correr el siguiente comando (En este caso g
 >kubectl scale statefulset mysql  --replicas=5
 
 #### Nota 1
-Note que esto no creará automaticamente los volumen persistentes, estos deben ser creados importando y adaptando el archivo pvc.ymal
+Note que esto no creará automaticamente los volumen persistentes, estos deben ser creados importando y adaptando el archivo pvc.ymal.
+
+Este archivo crea un volumen persitente.Se debera adaptar el archivo para crear cada volumen independiente mente y importarlo desde el cluster. Si se quisiera ampliar el numero de replicas de 2 a 5 se deberia hacer este proceso 3 veces
 
 #### Nota 2
 Si reduce el numero de replicas debe eliminar los volumenes manualmente
