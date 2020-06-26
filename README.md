@@ -68,4 +68,4 @@ para eliminar un volumen:
 
 > kubectl delete pvc data-mysql-3
 
- donde data-mysql-3 es el nombre del volumen. Además devera eliminar manualmente el volumen persistente creado con el archivo pvc.ymal
+ donde data-mysql-3 es el nombre del volumen. Además debera eliminar manualmente el volumen persistente creado con el archivo pvc.ymal
