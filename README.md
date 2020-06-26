@@ -1,6 +1,6 @@
 # Replicacion base de datos mysql
 
-Este archivo creara dos replicas. Las bases de datos solo seran acedidas desde el cluster. No podran ser acedidas por fuera del mismo.
+Este repositorio creará dos replicas. Las bases de datos solo seran acedidas desde el cluster. No podran ser acedidas por fuera del mismo.
 
 Este ejemplo es valido para clustr creados de tipo Custom. Es decir sin un provedor especifico.
 
