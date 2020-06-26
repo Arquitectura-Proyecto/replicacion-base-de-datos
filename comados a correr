@@ -1,0 +1,21 @@
+kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --\
+  mysql -h mysql-0.mysql <<EOF
+CREATE DATABASE authentication;
+EOF
+
+kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --\
+  mysql -h mysql-read -e "show databases"
+
+
+
+DBUSER	root
+DBURL	mysql
+DBPORT	3306
+DBPASSWORD	
+
+
+
+mas info https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/#configmap
+
+replicas
+kubectl scale statefulset mysql  --replicas=5

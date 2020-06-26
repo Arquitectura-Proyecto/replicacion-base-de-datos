@@ -1,0 +1,44 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+
+  name: localstorage
+
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: Immediate
+reclaimPolicy: Delete
+allowVolumeExpansion: True
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: mysql-01
+  labels:
+    type: local
+spec:
+  storageClassName: localstorage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/mysql01"
+    type: DirectoryOrCreate
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: mysql-02
+  labels:
+    type: local
+spec:
+  storageClassName: localstorage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/mysql02"
+    type: DirectoryOrCreate
