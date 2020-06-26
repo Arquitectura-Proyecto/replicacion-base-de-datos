@@ -47,7 +47,7 @@ Correr el microservicio a conestar con las siguiente variables de entorno
 
 
 ## Otros
-### Más informacioń
+### Más información
  Ejemplo adaptado de 📖:
 https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/
 
