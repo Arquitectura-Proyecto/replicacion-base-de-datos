@@ -1,4 +1,4 @@
-# Replicacion base de datos mysql
+# Replicacion base de datos mysql en Kubernetes
 
 Este repositorio creará dos replicas. Las bases de datos solo seran acedidas desde el cluster. No podran ser acedidas por fuera del mismo.
 
