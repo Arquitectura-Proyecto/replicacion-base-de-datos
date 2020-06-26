@@ -10,7 +10,7 @@ importar los siguientes archivos al cluster en el siguiente orden:
  Crea los volumenes persitentes y el storage class, (Solo creara por el momento dos volumenes)
  ### mysql-configmap.ymal
  Crea el config map de el servicio
- ### mysql-service
+ ### mysql-service.ymal
  Crea los servicios a utilizar
  ### mysql-statefulset.ymal
  Crea el workload con todos los contenedores necesarios para hacer la replicación
