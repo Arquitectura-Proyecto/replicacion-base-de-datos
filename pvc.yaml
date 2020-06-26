@@ -1,0 +1,15 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: mysql-01 # poner 0i donde i es el numero de replica
+  labels:
+    type: local
+spec:
+  storageClassName: localstorage
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/mysql01" # poner 0i donde i es el numero de replica
+    type: DirectoryOrCreate
