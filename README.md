@@ -30,7 +30,7 @@ EOF
   mysql -h mysql-read -e "show databases"
 
 ## PASO 3:
-Correr el microservicio a conestar con las siguiente variables de entorno
+Correr el microservicio a conectar con las siguiente variables de entorno
 
   > DBUSER	root 
   
