@@ -4,7 +4,7 @@ Este archivo creara dos replicas. Las bases de datos solo seran acedidas desde e
 
 Este ejemplo es valido para clustr creados de tipo Custom. Es decir sin un provedor especifico.
 
-## PASO 1:
+## PASO 1 🚀:
 importar los siguientes archivos al cluster en el siguiente orden:
  ### storage.yml
  Crea los volumenes persitentes y el storage class, (Solo creara por el momento dos volumenes)
