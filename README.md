@@ -53,7 +53,7 @@ https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-applica
 
 ### replicas
 Para las crear más replicas se debe correr el siguiente comando (En este caso generaria 5 replicas)
-kubectl scale statefulset mysql  --replicas=5
+>kubectl scale statefulset mysql  --replicas=5
 
 #### Nota 1
 Note que esto no creará automaticamente los volumen persistentes, estos deben ser creados importando y adaptando el archivo pvc.ymal
