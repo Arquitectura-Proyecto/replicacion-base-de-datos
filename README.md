@@ -7,7 +7,7 @@ Este ejemplo es valido para clustr creados de tipo Custom. Es decir sin un prove
 ## PASO 1:
 importar los siguientes archivos al cluster en el siguiente orden:
  ### storage.yml
- Crea los volumenes persitentes y el storage class, (Solo creara por el momento dos volumenes
+ Crea los volumenes persitentes y el storage class, (Solo creara por el momento dos volumenes)
  ### mysql-configmap.ymal
  Crea el config map de el servicio
  ### mysql-service
