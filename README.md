@@ -41,16 +41,17 @@ Correr el microservicio a conestar con las siguiente variables de entorno
   la DBURL no es por el nombre del workload, si este se cambia sin modificar nada más, la variable debe seguir llamandose igual.
 
 
-## mas informacion
+## Otros
+### Más informacioń
  Ejemplo adaptado de:
 https://kubernetes.io/docs/tasks/run-application/run-replicated-stateful-application/#configmap
 
-## replicas
+### replicas
 Para las crear más replicas se debe correr el siguiente comando (En este caso generaria 5 replicas)
 kubectl scale statefulset mysql  --replicas=5
 
-### Nota 1
+#### Nota 1
 Note que esto no creará automaticamente los volumen persistentes, estos deben ser creados importando y adaptando el archivo pvc.ymal
 
-### Nota 2
+#### Nota 2
 Si reduce el numero e replicar debe eliminar los volumenes manualmente
